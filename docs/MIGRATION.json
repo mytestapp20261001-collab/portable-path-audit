@@ -1,0 +1,125 @@
+{
+  "schema_version": 1,
+  "slug": "portable-path-audit",
+  "domain": "filesystem",
+  "guidance_group": "medium",
+  "source_commit": "1286096c10a23bbb04aca83679ae3c31f3326030",
+  "source_repository": "mytestapp20261001-collab/mytest-engineering-toolbox",
+  "source_repository_id": 1411411288,
+  "source_path": "tools/portable-path-audit",
+  "root_path": ".",
+  "publication_status": "prepared_only; coordinator verifies final repository identity and remote CI",
+  "expected_repository": "mytestapp20261001-collab/portable-path-audit",
+  "repository_id": null,
+  "preserved_files": [
+    {
+      "path": "README.md",
+      "size_bytes": 3643,
+      "sha256": "0d38c1f2ab4e5714360f6602b987476b714c9374f19913fa28c8cfc35ab731ad",
+      "git_blob_sha1": "04522eed4290accbf24c174526ae77afbb28513e",
+      "utf8": true,
+      "source_path": "tools/portable-path-audit/README.md"
+    },
+    {
+      "path": "SKILL.md",
+      "size_bytes": 1162,
+      "sha256": "86eb3b1a812efa2cc7c6ddffb25cf8c6e7ff4ff6e16457fda2cd3ade92677323",
+      "git_blob_sha1": "65394ef5abc22aa6c141ec1c9c8a61153e03c60c",
+      "utf8": true,
+      "source_path": "tools/portable-path-audit/SKILL.md"
+    },
+    {
+      "path": "VALIDATION.md",
+      "size_bytes": 855,
+      "sha256": "7d0f0643209f49d411a5692a27cc40dae4033ac82b63f2a4e3bd1e4a7449f470",
+      "git_blob_sha1": "5673e6e2969da4ce8c6d9abc2830bd66b79e6af0",
+      "utf8": true,
+      "source_path": "tools/portable-path-audit/VALIDATION.md"
+    },
+    {
+      "path": "_support.py",
+      "size_bytes": 6766,
+      "sha256": "ce5feab729b0dc2ab1019bb1808f06795e9c5cd98a220c61dcc464275938eca4",
+      "git_blob_sha1": "b52ce55f79b8b6eedf382eb6b12f60d1fb5f8291",
+      "utf8": true,
+      "source_path": "tools/portable-path-audit/_support.py"
+    },
+    {
+      "path": "examples/run_examples.py",
+      "size_bytes": 655,
+      "sha256": "ab45d856370afdc17e792748cae43c1b47b05d628b57a12439cfc4cc30181292",
+      "git_blob_sha1": "7692d5f0d928b34fda27830833e0dec3752a2620",
+      "utf8": true,
+      "source_path": "tools/portable-path-audit/examples/run_examples.py"
+    },
+    {
+      "path": "test_tool.py",
+      "size_bytes": 4545,
+      "sha256": "df5ab117546363ed348b94bfceec2ed189ccace72ae1d3d061b2051e435e4c7c",
+      "git_blob_sha1": "9789addb59dea8958d8f854fe41140c9296bf646",
+      "utf8": true,
+      "source_path": "tools/portable-path-audit/test_tool.py"
+    },
+    {
+      "path": "tool.py",
+      "size_bytes": 2391,
+      "sha256": "cf7528be682453854de8ff125f8fd53cc7bf5638de220d12de039fc7d0988067",
+      "git_blob_sha1": "bcfbf2298fc124d16733e4fd684328a6668c415d",
+      "utf8": true,
+      "source_path": "tools/portable-path-audit/tool.py"
+    },
+    {
+      "path": "LICENSE",
+      "size_bytes": 1076,
+      "sha256": "dce76471613629e93f3f98b7aaa6f72ff9adb88204a3f83d3045952017ab2f46",
+      "git_blob_sha1": "677c4463d59b560db9c1fde1052eff6eefa6441a",
+      "utf8": true,
+      "source_path": "LICENSE"
+    },
+    {
+      "path": ".gitignore",
+      "size_bytes": 62,
+      "sha256": "e4d5aecc4cd36f593c2e7f3dad08b24261b13466b898004a445614058d29d8de",
+      "git_blob_sha1": "fe9f8fb619601213cbfef4f6eadb5d413d8f7f01",
+      "utf8": true,
+      "source_path": ".gitignore"
+    }
+  ],
+  "readme_checks": [
+    {
+      "label": "README synthetic positive/negative runner",
+      "args": [
+        "examples/run_examples.py"
+      ],
+      "expected_exit": 0,
+      "output": "example-json",
+      "documented_command": "python3 examples/run_examples.py"
+    },
+    {
+      "label": "CLI help",
+      "args": [
+        "tool.py",
+        "--help"
+      ],
+      "expected_exit": 0,
+      "output": "help"
+    },
+    {
+      "label": "CLI missing input",
+      "args": [
+        "tool.py"
+      ],
+      "expected_exit": 2,
+      "output": "json"
+    },
+    {
+      "label": "CLI unknown argument",
+      "args": [
+        "tool.py",
+        "--unsupported-migration-test"
+      ],
+      "expected_exit": 2,
+      "output": "json"
+    }
+  ]
+}
